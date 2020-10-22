@@ -13,20 +13,20 @@ export default class App extends React.Component {
         return (
             <NavigationContainer>
                 <Stack.Navigator>
-                    {/* <Stack.Screen
-                    name="Intro"
-                    component={Intro}
-                    options={{ headerShown: false}}
-                    /> */}
                     <Stack.Screen
-                    name="Menu"
-                    component={Menu}
-                    options={{ headerShown: false}}
+                        name="Intro"
+                        component={Intro}
+                        options={{ headerShown: false }}
                     />
                     <Stack.Screen
-                    name="RCP"
-                    component={RCP}
-                    options={{ headerShown: false}}
+                        name="Menu"
+                        component={Menu}
+                        options={{ headerShown: false }}
+                    />
+                    <Stack.Screen
+                        name="RCP"
+                        component={RCP}
+                        options={{ headerShown: false }}
                     />
                 </Stack.Navigator>
             </NavigationContainer>

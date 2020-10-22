@@ -3,6 +3,7 @@ import { TouchableWithoutFeedback,StyleSheet, Image, SafeAreaView, Text, View} f
 
 class MenuScreen extends React.Component {
     render() {
+        
         return (
             <SafeAreaView style={styles.container}>
                 <View style={styles.viewTitle}>
@@ -10,8 +11,9 @@ class MenuScreen extends React.Component {
                 </View>
                 <View style={styles.viewLogo}> 
                     <TouchableWithoutFeedback
-                    onPress={() =>
+                    onPress={() => 
                         this.props.navigation.navigate('RCP')
+                        
                       }>
                         <Image
                             style={styles.bottunLogo}

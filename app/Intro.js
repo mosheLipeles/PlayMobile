@@ -14,7 +14,7 @@ export default class Intro extends React.Component {
             //IF FALSE NAVIGATE TO ERROR
             if (true) {
                 this.setState({
-                    view: <Menu />
+                    view: <Menu {...this.props}/>
                 });
             }
         }, 4000); //TIME OF WAITING
