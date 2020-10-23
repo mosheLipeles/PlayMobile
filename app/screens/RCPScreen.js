@@ -25,16 +25,22 @@ class RCPScreen extends Component {
     }
 
     onItemHandle = (logoId) =>{
-        //Alert.alert(null,logoId === 1 ? "Rock" : logoId === 2 ? "Papar" : "Scissors")
         var rnd = Math.floor(Math.random() * 3) + 1 ;
-        //Alert.alert(String(rnd));
         const srcComputer=[...this.state.srcComputer];
         srcComputer[0]=this.state.logos[rnd-1].src;
-        
         this.setState({srcComputer});
         setTimeout(() => {
             Alert.alert(this.whoWin(logoId,rnd))
-            }, 1000);
+            }, 400);
+    }
+
+    onHandleExit = (route) => {
+        const srcComputer=[...this.state.srcComputer];
+        srcComputer[0]=require('../assets/questionMark.jpg');
+        route.navigation.navigate('Menu');
+        setTimeout(() => {
+            this.setState({srcComputer})
+            }, 500);
     }
 
     whoWin = (logoId,rnd) =>{
@@ -47,7 +53,9 @@ class RCPScreen extends Component {
         const route = this.props.route;
         return (
             <SafeAreaView style={styles.container}>
-                <RCPTitle route={this.props} />
+                <RCPTitle 
+                    route={this.props}
+                    onExit={this.onHandleExit} />
                 <RCPComputerView logo={this.state.srcComputer[0]}/>
                 <RCPPlayerView 
                     logos={this.state.logos}

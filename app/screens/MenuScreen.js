@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     bottunLogo:{
-        width: 70 ,
-        height: 70
+        width: 90 ,
+        height: 90
     },
     textTitle: {
         fontSize: 40,

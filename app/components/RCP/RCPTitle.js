@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { View, Text , Button, StyleSheet } from 'react-native';
 
 class RCPTitle extends Component {
+    
     render() { 
+        
         return (
             <View style={styles.viewTitle}>
                 <Button
                 title="Exit"
                 onPress={() =>
-                    this.props.route.navigation.navigate('Menu')
+                    this.props.onExit(this.props.route)
                     } />
                 <Text style={styles.textTitle}> Rock, paper, scissors</Text>
             </View>
