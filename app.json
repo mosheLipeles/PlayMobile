@@ -22,6 +22,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": ""
+    "description": "PlayMobile is a small application that contain a simple game - Rock, paper, scissors."
   }
 }
